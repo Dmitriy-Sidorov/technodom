@@ -52,6 +52,13 @@ module.exports = function (grunt) {
             }
         },
 
+        group_css_media_queries: {
+            sample: {
+                src: 'style.css',
+                dest: 'dist/css/style.css'
+            }
+        },
+
         concat: {
             options: {
                 separator: '\n'

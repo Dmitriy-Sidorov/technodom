@@ -2,7 +2,7 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.wrapper {
+.container {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
@@ -62,4 +62,11 @@ body {
     margin-left: 9px;
     color: #010101;
   }
+}
+
+
+
+
+.footer {
+  background-color: #323232;
 }

@@ -22,7 +22,9 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-group-css-media-queries": "^1.0.1",
     "grunt-postcss": "^0.9.0",
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^3.5.2",
+    "smart-grid": "^2.0.1"
   }
 }
