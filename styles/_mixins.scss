@@ -1,0 +1,4 @@
+@mixin col-max-width($x) {
+  width: (($x - 10px) / 980px)*100%;
+  padding-right: 10px;
+}

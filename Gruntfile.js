@@ -20,6 +20,13 @@ module.exports = function (grunt) {
             }
         },
 
+        group_css_media_queries: {
+            sample: {
+                src: './style/style.css',
+                dest: './dist/css/style.css'
+            }
+        },
+
         postcss: {
             prefix: {
                 options: {
@@ -49,13 +56,6 @@ module.exports = function (grunt) {
                 },
                 src: './styles/style.css',
                 dest: './dist/css/style.min.css'
-            }
-        },
-
-        group_css_media_queries: {
-            sample: {
-                src: 'style.css',
-                dest: 'dist/css/style.css'
             }
         },
 
@@ -128,6 +128,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('style', [
         'sass:style',
+        'group_css_media_queries',
         'postcss:prefix',
         'postcss:min'
     ]);

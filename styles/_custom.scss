@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+main {
+  flex: 1;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.27;
+  font-weight: bold;
+  color: #000;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #898989;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.43;
+  color: #898989;
+  margin: 3px 0;
+}
+
+.col-one {
+  @include col-max-width(980px);
+}
+
+/*шапка*/
+.navbarStaticTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #efefef;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.citySelection {
+  display: flex;
+  color: #898989;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  line-height: 1;
+
+  &__your {
+    padding-right: 10px;
+  }
+
+  &__chosen {
+    color: #010101;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 19px 10px;
+  background-color: #fdfbef;
+
+  &__cabinet {
+    margin-left: 9px;
+    color: #010101;
+  }
+}
+
+/*начало main-а*/
+
+/*хлебные крошки*/
+.breadcrumbs {
+  margin-bottom: 34px;
+
+  &_col {
+    width: 100%;
+    padding: 0 20px;
+  }
+  ul {
+    font-size: 12px;
+    line-height: 1;
+    color: #055197;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+/*контент*/
+.content {
+  &_col {
+    @include col-max-width(720px);
+    padding: 0 20px;
+  }
+
+  &__textName {
+    display: inline-block;
+    margin-bottom: 21px;
+    padding-right: 4px;
+
+    + span {
+      font-size: 26px;
+      line-height: 1;
+      color: #898989;
+    }
+  }
+
+  &__text {
+    padding: 0 20px;
+
+    &_hidden {
+      display: none;
+    }
+
+    &__readMore {
+      font-size: 14px;
+      line-height: 1.43;
+      color: #055197;
+      cursor: pointer;
+      margin-top: 13px;
+      padding-left: 2px;
+
+      &:hover {
+        color: #898989;
+      }
+    }
+  }
+}
+
+/*футер*/
+.footer {
+  background-color: #323232;
+  padding-top: 37px;
+  padding-bottom: 14px;
+}
+
+.footer p {
+  font-size: 16px;
+  line-height: 1.38;
+}
+
+.name {
+  width: 100%;
+  font-size: 30px;
+  color: #d2d2d2;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.description {
+  &_col {
+    @include col-max-width(475px);
+  }
+}
+
+.call {
+  &_col {
+    @include col-max-width(285px);
+  }
+  &__insert {
+    font-size: 14px;
+  }
+  &__tel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d2d2d2;
+    line-height: 1;
+    margin-top: 5.5px;
+  }
+}
+
+.mail {
+  &_col {
+    @include col-max-width(220px);
+  }
+  &__email, &__skype {
+    color: #d2d2d2;
+  }
+  &__email {
+    margin-top: 5px;
+    margin-bottom: 19px;
+  }
+  &__skype {
+    display: flex;
+    align-items: center;
+
+    &_icon {
+      padding-right: 10px;
+    }
+  }
+}
