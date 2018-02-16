@@ -21,9 +21,9 @@ module.exports = function (grunt) {
         },
 
         group_css_media_queries: {
-            sample: {
-                src: './style/style.css',
-                dest: './dist/css/style.css'
+            options: {},
+            files: {
+                'dist/css/style.css': ['style/style.css']
             }
         },
 
@@ -38,11 +38,11 @@ module.exports = function (grunt) {
                 },
                 files: [
                     {
-                        src: './styles/style.css',
-                        dest: './dist/css/style.css'
+                        src: 'styles/style.css',
+                        dest: 'dist/css/style.css'
                     },
                     {
-                        src: './styles/style.css'
+                        src: 'styles/style.css'
                     }
 
                 ]
@@ -54,8 +54,8 @@ module.exports = function (grunt) {
                         require('cssnano')
                     ]
                 },
-                src: './styles/style.css',
-                dest: './dist/css/style.min.css'
+                src: 'styles/style.css',
+                dest: 'dist/css/style.min.css'
             }
         },
 
@@ -102,7 +102,7 @@ module.exports = function (grunt) {
                 files: ['js/*.js'],
                 tasks: ['concat', 'uglify'],
                 options: {
-                    livereload: true,
+                    livereload: false,
                     spawn: false
                 }
             }
@@ -114,7 +114,7 @@ module.exports = function (grunt) {
                     port: 8080,
                     base: 'dist',
                     keepalive: true,
-                    livereload: true
+                    livereload: false
                 }
             }
         }

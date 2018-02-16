@@ -1,8 +1,10 @@
-@charset "UTF-8";
 .container {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto; }
+  @media (min-width: 320px) {
+    .container {
+      max-width: 280px; } }
   @media (min-width: 576px) {
     .container {
       max-width: 530px; } }
@@ -59,9 +61,15 @@ p {
   color: #898989;
   margin: 3px 0; }
 
-.col-one {
-  width: 98.9795918367%;
-  padding-right: 10px; }
+@media (max-width: 576px) {
+  .align {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 /*╤И╨░╨┐╨║╨░*/
 .navbarStaticTop {
@@ -133,6 +141,13 @@ p {
   width: 72.4489795918%;
   padding-right: 10px;
   padding: 0 20px; }
+  @media (max-width: 576px) {
+    .content_col {
+      width: auto;
+      padding-right: 0; } }
+  @media (max-width: 768px) {
+    .content_col {
+      width: auto; } }
 .content__textName {
   display: inline-block;
   margin-bottom: 21px;
@@ -151,6 +166,7 @@ p {
     color: #055197;
     cursor: pointer;
     margin-top: 13px;
+    margin-bottom: 20px;
     padding-left: 2px; }
     .content__text__readMore:hover {
       color: #898989; }
@@ -166,19 +182,44 @@ p {
   line-height: 1.38; }
 
 .name {
-  width: 100%;
   font-size: 30px;
   color: #d2d2d2;
   line-height: 1;
   margin-bottom: 12px; }
+  @media (max-width: 576px) {
+    .name {
+      min-width: 240px; } }
+  @media (min-width: 577px) {
+    .name {
+      width: 100%; } }
 
+@media (max-width: 576px) {
+  .description {
+    min-width: 240px; } }
+@media (max-width: 576px) {
+  .description {
+    margin-bottom: 15px; } }
 .description_col {
   width: 47.4489795918%;
   padding-right: 10px; }
+  @media (max-width: 576px) {
+    .description_col {
+      width: auto;
+      padding-right: 0; } }
 
+@media (max-width: 576px) {
+  .call {
+    min-width: 240px; } }
+@media (max-width: 576px) {
+  .call {
+    margin-bottom: 15px; } }
 .call_col {
   width: 28.0612244898%;
   padding-right: 10px; }
+  @media (max-width: 576px) {
+    .call_col {
+      width: auto;
+      padding-right: 0; } }
 .call__insert {
   font-size: 14px; }
 .call__tel {
@@ -188,9 +229,19 @@ p {
   line-height: 1;
   margin-top: 5.5px; }
 
+@media (max-width: 576px) {
+  .mail {
+    min-width: 240px; } }
+@media (max-width: 576px) {
+  .mail {
+    margin-bottom: 15px; } }
 .mail_col {
   width: 21.4285714286%;
   padding-right: 10px; }
+  @media (max-width: 576px) {
+    .mail_col {
+      width: auto;
+      padding-right: 0; } }
 .mail__email, .mail__skype {
   color: #d2d2d2; }
 .mail__email {

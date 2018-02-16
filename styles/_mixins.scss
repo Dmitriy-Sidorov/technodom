@@ -1,4 +1,20 @@
 @mixin col-max-width($x) {
   width: (($x - 10px) / 980px)*100%;
   padding-right: 10px;
+  @media (max-width: 576px) {
+    width: auto;
+    padding-right: 0;
+  }
+}
+
+@mixin sizeBlock () {
+  @media (max-width: 576px) {
+    min-width: 240px;
+  }
+}
+
+@mixin indent () {
+  @media (max-width: 576px) {
+    margin-bottom: 15px;
+  }
 }

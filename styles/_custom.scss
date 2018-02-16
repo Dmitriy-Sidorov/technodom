@@ -36,8 +36,11 @@ p {
   margin: 3px 0;
 }
 
-.col-one {
-  @include col-max-width(980px);
+.align {
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*шапка*/
@@ -111,6 +114,10 @@ p {
   &_col {
     @include col-max-width(720px);
     padding: 0 20px;
+
+    @media (max-width: 768px) {
+      width: auto;
+    }
   }
 
   &__textName {
@@ -138,6 +145,7 @@ p {
       color: #055197;
       cursor: pointer;
       margin-top: 13px;
+      margin-bottom: 20px;
       padding-left: 2px;
 
       &:hover {
@@ -160,20 +168,27 @@ p {
 }
 
 .name {
-  width: 100%;
+  @include sizeBlock();
   font-size: 30px;
   color: #d2d2d2;
   line-height: 1;
   margin-bottom: 12px;
+  @media (min-width: 577px) {
+    width: 100%;
+  }
 }
 
 .description {
+  @include sizeBlock();
+  @include indent();
   &_col {
     @include col-max-width(475px);
   }
 }
 
 .call {
+  @include sizeBlock();
+  @include indent();
   &_col {
     @include col-max-width(285px);
   }
@@ -190,6 +205,8 @@ p {
 }
 
 .mail {
+  @include sizeBlock();
+  @include indent();
   &_col {
     @include col-max-width(220px);
   }
