@@ -1,5 +1,5 @@
 {
-  "name": "calculator-jquery",
+  "name": "technodom",
   "version": "0.1.0",
   "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
   "main": "index.js",
@@ -14,6 +14,7 @@
     "cssnano": "^3.10.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
+    "grunt-combine-media-queries": "^1.0.20",
     "grunt-contrib-compress": "^1.4.3",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
@@ -22,7 +23,6 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-group-css-media-queries": "^1.0.1",
     "grunt-postcss": "^0.9.0",
     "load-grunt-tasks": "^3.5.2",
     "smart-grid": "^2.0.1"

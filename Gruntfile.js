@@ -11,19 +11,9 @@ module.exports = function (grunt) {
             style: {
                 files: [
                     {
-                        'dist/css/style.css': 'styles/style.scss'
-                    },
-                    {
                         'styles/style.css': 'styles/style.scss'
                     }
                 ]
-            }
-        },
-
-        group_css_media_queries: {
-            options: {},
-            files: {
-                'dist/css/style.css': ['style/style.css']
             }
         },
 
@@ -38,13 +28,8 @@ module.exports = function (grunt) {
                 },
                 files: [
                     {
-                        src: 'styles/style.css',
-                        dest: 'dist/css/style.css'
-                    },
-                    {
                         src: 'styles/style.css'
                     }
-
                 ]
             },
 
@@ -54,8 +39,26 @@ module.exports = function (grunt) {
                         require('cssnano')
                     ]
                 },
-                src: 'styles/style.css',
-                dest: 'dist/css/style.min.css'
+                files: [
+                    {
+                        src: 'dist/css/style.css',
+                        dest: 'dist/css/style.min.css'
+                    }
+                ]
+
+            }
+        },
+
+        cmq: {
+            options: {
+                log: false
+            },
+            your_target: {
+                files: [
+                    {
+                        'dist/css/style.css': ['styles/style.css']
+                    }
+                ]
             }
         },
 
@@ -128,8 +131,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('style', [
         'sass:style',
-        'group_css_media_queries',
         'postcss:prefix',
+        'cmq',
         'postcss:min'
     ]);
 

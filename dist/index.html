@@ -2,87 +2,94 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+    <title>ТехноДом</title>
+    <meta name="description" content="Ноутбуки">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="navbarStaticTop">
-                <div class="citySelection">
-                    <div class="citySelection__your">Ваш город</div>
-                    <div class="citySelection__chosen">Усть-Каменогорск</div>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="navbarStaticTop">
+                    <div class="citySelection">
+                        <div class="citySelection__your">Ваш город</div>
+                        <div class="citySelection__chosen">Усть-Каменогорск</div>
+                    </div>
+                    <div class="profile">
+                        <img class="profile__img" src="img/account.jpg" alt="иконка профиля">
+                        <div class="profile__cabinet">Личный кабинет</div>
+                    </div>
                 </div>
-                <div class="profile">
-                    <img class="profile__img" src="img/account.jpg" alt="иконка профиля">
-                    <div class="profile__cabinet">Личный кабинет</div>
-                </div>
-            </div>
-            <div class="logo">
-                <img class="logo__img" src="img/logo.png" alt="Логотип компании">
-            </div>
-        </div>
-    </div>
-</header>
-<main>
-    <div class="container">
-        <div class="row">
-            <div class="breadcrumbs breadcrumbs_col">
-                <ul>
-                    <li>Главная</li>
-                    <li>&#62;</li>
-                    <li>Ноутбуки, компьютеры</li>
-                    <li>&#62;</li>
-                    <li>Ноутбуки</li>
-                </ul>
-            </div>
-            <div class="content content_col">
-                <h1 class="content__textName">Ноутбуки</h1>
-                <span>(4 685)</span>
-                <div class="content__text">
-                    <h2>Ноутбуки</h2>
-                    <p>Магазин «ТЕХНОДОМ» рад приветствовать всех, кто ценит мобильность и удобство портативных
-                        компьютеров,
-                        и предлагает по приемлемой стоимости самые современные ноутбуки в Казахстане! В данном разделе
-                        Вы
-                        можете выбрать и выгодно купить ноутбук в Актобе, в Алматы, в Астане, в Караганде, в Костанае, в
-                        Павлодаре, в Усть-Каменогорске и других населенных пунктах страны, <span
-                                class="content__text_hidden">оформив заказ в онлайн
-                        режиме. В
-                        электронном каталоге technodom.kz представлены самые разные модели ноутбуков, нетбуков и
-                            ультрабуков, удовлетворяющие запросы всех категорий пользователей</span></p>
-                    <div class="content__text__readMore">Читать полностью</div>
+                <div class="logo">
+                    <img class="logo__img" src="img/logo.png" alt="Логотип компании">
                 </div>
             </div>
         </div>
-    </div>
-</main>
-<footer class="footer">
-    <div class="container">
-        <div class="row align">
-            <div class="name sizeBlock">Технодом</div>
-            <div class="description description_col">
-                <p class="description__text">Интернет-магазин бытовой<br>
-                    техники и электроники</p>
-            </div>
-            <div class="call call_col">
-                <p>Единый Call Center<br>
-                    <span class="call__insert">Бесплатные звонки по Казахстану</span></p>
-                <div class="call__tel">8 800 080 1111</div>
-            </div>
-            <div class="mail mail_col">
-                <p>Электронная почта</p>
-                <div class="mail__email">callcenter@technodom.kz</div>
-                <div class="mail__skype">
-                    <img class="mail__skype_icon" src="img/icon-skype.png" alt="">admin.technodom
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <script id="templateBreadcrumbs" type="text/x-handlebars-template">
+                    {{#list breadcrumbs}}{{category}}{{/list}}
+                </script>
+                <div class="breadcrumbs breadcrumbs_col">
+                    <!--<ul>
+                        <li>Главная</li>
+                        <li>&#62;</li>
+                        <li>Ноутбуки, компьютеры</li>
+                        <li>&#62;</li>
+                        <li>Ноутбуки</li>
+                    </ul>-->
+                </div>
+                <div class="content content_col">
+                    <h1 class="content__textName">Ноутбуки</h1>
+                    <span>(4 685)</span>
+                    <div class="content__text">
+                        <h2>Ноутбуки</h2>
+                        <p>Магазин «ТЕХНОДОМ» рад приветствовать всех, кто ценит мобильность и удобство портативных
+                            компьютеров, и предлагает по приемлемой стоимости самые современные ноутбуки в Казахстане! В
+                            данном
+                            разделе Вы можете выбрать и выгодно купить ноутбук в Актобе, в Алматы, в Астане, в
+                            Караганде, в
+                            Костанае, в Павлодаре, в Усть-Каменогорске и других населенных пунктах страны, <span
+                                    class="content__text_hidden">оформив заказ в онлайн
+                        режиме. В электронном каталоге technodom.kz представлены самые разные модели ноутбуков, нетбуков и ультрабуков, удовлетворяющие запросы всех категорий пользователей</span>
+                        </p>
+                        <div class="content__readMore">Читать полностью</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row align">
+                <div class="name sizeBlock">Технодом</div>
+                <div class="description description_col">
+                    <p class="description__text">Интернет-магазин бытовой<br>
+                        техники и электроники</p>
+                </div>
+                <div class="call call_col">
+                    <p>Единый Call Center<br>
+                        <span class="call__insert">Бесплатные звонки по Казахстану</span></p>
+                    <div class="call__tel">8 800 080 1111</div>
+                </div>
+                <div class="mail mail_col">
+                    <p>Электронная почта</p>
+                    <div class="mail__email">callcenter@technodom.kz</div>
+                    <div class="mail__skype">
+                        <img class="mail__skype_icon" src="img/icon-skype.png" alt="">admin.technodom
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+<script src="js/built.js"></script>
 </body>
 </html>
