@@ -1,4 +1,5 @@
 $(function () {
+    /*генерация хлебных крошек*/
     Handlebars.registerHelper('list', function (items, options) {
         var out = '<ul>';
         out = out + '<li>' + options.fn(items[0]) + '</li>';
@@ -21,4 +22,13 @@ $(function () {
 
     var compiledHtml = templateCompile(context);
     $('.breadcrumbs').html(compiledHtml);
+
+    /*читать далее*/
+    $('#readMore').on('click', function(){
+        var textHidden = $('#textHidden');
+        $(this).text(textHidden.is(':visible') ? 'Читать полностью' : 'Скрыть');
+        textHidden.toggle('slow');
+    });
 });
+
+

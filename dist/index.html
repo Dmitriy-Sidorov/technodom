@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script id="templateBreadcrumbs" type="text/x-handlebars-template">
+        {{#list breadcrumbs}}{{category}}{{/list}}
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -32,18 +35,7 @@
     <main>
         <div class="container">
             <div class="row">
-                <script id="templateBreadcrumbs" type="text/x-handlebars-template">
-                    {{#list breadcrumbs}}{{category}}{{/list}}
-                </script>
-                <div class="breadcrumbs breadcrumbs_col">
-                    <!--<ul>
-                        <li>Главная</li>
-                        <li>&#62;</li>
-                        <li>Ноутбуки, компьютеры</li>
-                        <li>&#62;</li>
-                        <li>Ноутбуки</li>
-                    </ul>-->
-                </div>
+                <div class="breadcrumbs breadcrumbs_col"></div>
                 <div class="content content_col">
                     <h1 class="content__textName">Ноутбуки</h1>
                     <span>(4 685)</span>
@@ -54,11 +46,11 @@
                             данном
                             разделе Вы можете выбрать и выгодно купить ноутбук в Актобе, в Алматы, в Астане, в
                             Караганде, в
-                            Костанае, в Павлодаре, в Усть-Каменогорске и других населенных пунктах страны, <span
+                            Костанае, в Павлодаре, в Усть-Каменогорске и других населенных пунктах страны, <span id="textHidden"
                                     class="content__text_hidden">оформив заказ в онлайн
                         режиме. В электронном каталоге technodom.kz представлены самые разные модели ноутбуков, нетбуков и ультрабуков, удовлетворяющие запросы всех категорий пользователей</span>
                         </p>
-                        <div class="content__readMore">Читать полностью</div>
+                        <div id="readMore" class="content__readMore">Читать полностью</div>
                     </div>
                 </div>
             </div>
