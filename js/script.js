@@ -22,13 +22,30 @@ $(function () {
 
     var compiledHtml = templateCompile(context);
     $('.breadcrumbs').html(compiledHtml);
-
-    /*читать далее*/
-    $('#readMore').on('click', function(){
-        var textHidden = $('#textHidden');
-        $(this).text(textHidden.is(':visible') ? 'Читать полностью' : 'Скрыть');
-        textHidden.toggle('slow');
-    });
 });
+
+(function ($) {
+    var textHidden = $('.paragraph'); /*для срабатывания анимированного скрытия или отображения объекта,
+                                        добавить класс '.paragraph'*/
+    var heightParagraph = textHidden.height();
+
+    textHidden.css('height', heightParagraph);
+    textHidden.toggleClass('hidden');
+
+    var defaults = {
+        show: 'show',
+        hide: 'hide'
+    };
+    var options;
+    $.fn.readMorePlugin = function (params) {
+        options = $.extend({}, defaults, options, params);
+        $(this).on('click', function () {
+            textHidden.toggleClass('hidden');
+            $(this).text(textHidden.is('.hidden') ? options.show : options.hide);
+        });
+        return this;
+    };
+})(jQuery);
+
 
 

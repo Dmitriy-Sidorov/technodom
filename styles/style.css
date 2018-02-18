@@ -87,6 +87,25 @@ p {
         -ms-flex-align: center;
             align-items: center; } }
 
+.hidden {
+  height: 5rem !important;
+  -webkit-transition-duration: 2s;
+       -o-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  overflow: hidden; }
+
+.paragraph {
+  overflow: hidden;
+  -webkit-transition-duration: 2s;
+       -o-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all; }
+
 /*╤И╨░╨┐╨║╨░*/
 .navbarStaticTop {
   display: -webkit-box;
@@ -175,8 +194,6 @@ p {
     color: #898989; }
 .content__text {
   padding: 0 20px; }
-  .content__text_hidden {
-    display: none; }
 .content__readMore {
   font-size: 14px;
   line-height: 1.43;

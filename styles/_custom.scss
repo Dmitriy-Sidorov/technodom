@@ -59,6 +59,19 @@ p {
   }
 }
 
+.hidden {
+  height: 5rem!important;
+  transition-duration: 2s;
+  transition-property: all;
+  overflow: hidden;
+}
+
+.paragraph {
+  overflow: hidden;
+  transition-duration: 2s;
+  transition-property: all;
+}
+
 /*шапка*/
 .navbarStaticTop {
   display: flex;
@@ -150,10 +163,6 @@ p {
   }
   &__text {
     padding: 0 20px;
-
-    &_hidden {
-      display: none;
-    }
   }
   &__readMore {
     font-size: 14px;
